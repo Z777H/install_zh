@@ -51,7 +51,7 @@ VIRT=$(hostnamectl | grep -e "Virtualization" | awk '{print $2}')
 RAM=$(free -m | awk '/Mem:/ { print $2 }')
 IP_SERV=`ip -o -4 address show scope global | tr '/' ' ' | awk '$3~/^inet/ && $2~/^(eth|veth|venet|ens|eno|enp)[0-9]+$|^enp[0-9]+s[0-9a-z]+$/ {print $4}'|head -1`
 
-MIRROR="zerohost-porasha.ru/repo"
+MIRROR="raw.githubusercontent.com/Z777H/install_zh/main"
 PMA_VERSION="5.2.0"
 PANEL_NAME="porasha.zip"
 
